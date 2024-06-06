@@ -21,8 +21,6 @@ for hoja in quechua.sheet_names:
     d = df.to_dict()                                        
     D[hoja] = d
 
-def conj_quechua(base, numero, persona, tiempo): 
-    return base + D[tiempo][numero][persona]
 quechua_pronombres = pd.read_excel('pronombres.xlsx')
 quechua_pronombres = pd.ExcelFile('pronombres.xlsx')
 DP = {}
