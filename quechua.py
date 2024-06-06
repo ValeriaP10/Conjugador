@@ -84,4 +84,4 @@ tiempo = st.radio(
 
 #st.write("Seleccionaste: ", tiempo)
 
-st.write("El verbo conjugado es: ", conj_final(base,numero,persona,tiempo))
+st.write("El verbo conjugado es: ",conj_final(base,numero,persona,tiempo))
