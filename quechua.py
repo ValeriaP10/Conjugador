@@ -32,7 +32,7 @@ dfp.set_index(c[0], inplace=True)
 dp = dfp.to_dict()
 
 def conj_final(base,numero,persona,tiempo):
-  return dp[numero][persona] + ' ' + base + D[tiempo][numero][persona]
+    return dp[numero][persona] + ' ' + base + D[tiempo][numero][persona]
 
 ##########################################################################
 ##########################################################################
@@ -70,7 +70,7 @@ persona = st.radio(
 
 numero = st.radio(
     "Seleccione un numero: ",
-    ["singular", "Plural"],
+    ["singular", "plural"],
     index=None,
 )
 
