@@ -20,7 +20,7 @@ for hoja in quechua.sheet_names:
   df.set_index(c[0], inplace=True)                        
   d = df.to_dict()                                        
   D[hoja] = d
-D
+
 def conj_quechua(base, numero, persona, tiempo): 
     return base + D[tiempo][numero][persona]
 quechua_pronombres = pd.read_excel('pronombres.xlsx')
@@ -30,7 +30,7 @@ dfp = pd.read_excel('pronombres.xlsx')
 c = dfp.columns                             
 dfp.set_index(c[0], inplace=True)           
 dp = dfp.to_dict()
-dp
+
 def conj_final(base,numero,persona,tiempo):
   return dp[numero][persona] + ' ' + base + D[tiempo][numero][persona]
 
