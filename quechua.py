@@ -14,12 +14,12 @@ quechua = pd.ExcelFile('Quechua.xlsx')
 D = {}
 
 
-for hoja in quechua.sheet_names:
-  df = pd.read_excel('Quechua.xlsx', sheet_name=hoja)     
-  c = df.columns                                          
-  df.set_index(c[0], inplace=True)                        
-  d = df.to_dict()                                        
-  D[hoja] = d
+for hoja in quechua.sheet_names: 
+    df = pd.read_excel('Quechua.xlsx', sheet_name=hoja)     
+    c = df.columns                                          
+    df.set_index(c[0], inplace=True)                        
+    d = df.to_dict()                                        
+    D[hoja] = d
 
 def conj_quechua(base, numero, persona, tiempo): 
     return base + D[tiempo][numero][persona]
