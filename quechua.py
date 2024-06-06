@@ -5,6 +5,38 @@
 import pandas as pd
 verbos = pd.read_excel('verbos.xlsx')
 
+##########################################################################
+##########################################################################
+
+import pandas as pd
+quechua = pd.read_excel('Quechua.xlsx')
+quechua = pd.ExcelFile('Quechua.xlsx')
+D = {}
+
+
+for hoja in quechua.sheet_names:
+  df = pd.read_excel('Quechua.xlsx', sheet_name=hoja)     
+  c = df.columns                                          
+  df.set_index(c[0], inplace=True)                        
+  d = df.to_dict()                                        
+  D[hoja] = d
+D
+def conj_quechua(base, numero, persona, tiempo): 
+    return base + D[tiempo][numero][persona]
+quechua_pronombres = pd.read_excel('pronombres.xlsx')
+quechua_pronombres = pd.ExcelFile('pronombres.xlsx')
+DP = {}
+dfp = pd.read_excel('pronombres.xlsx')      
+c = dfp.columns                             
+dfp.set_index(c[0], inplace=True)           
+dp = dfp.to_dict()
+dp
+def conj_final(base,numero,persona,tiempo):
+  return dp[numero][persona] + ' ' + base + D[tiempo][numero][persona]
+
+##########################################################################
+##########################################################################
+
 ## diccionario
 
 quechua = list(verbos['quechua'])
@@ -18,11 +50,11 @@ import streamlit as st
 
 ## menú desplegable para seleccionar verbos
 
-option = st.selectbox(
+base = st.selectbox(
     "Seleccione un verbo en quechua: ",
     quechua)
 
-st.write("Seleccionaste: ", dict_que_esp[option])
+# st.write("Seleccionaste: ", dict_que_esp[base])
 
 ## menú desplegable para seleccionar persona
 
@@ -44,3 +76,12 @@ numero = st.radio(
 
 st.write("Seleccionaste: ", numero)
 
+tiempo = st.radio(
+    "Seleccione un tiempo: ",
+    ["presente simple","presente progresivo","presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple","pasado no experimentado progresivo","pasado no experimentado habitual"],
+    index=None,
+)
+
+st.write("Seleccionaste: ", tiempo)
+
+st.write("El verbo conjugado es: ", conj_final(base,numero,persona,tiempo))
