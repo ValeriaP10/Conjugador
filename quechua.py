@@ -64,7 +64,7 @@ persona = st.radio(
     index=None,
 )
 
-st.write("Seleccionaste: ", persona)
+#st.write("Seleccionaste: ", persona)
 
 ## menú desplegable para seleccionar numero
 
@@ -74,7 +74,7 @@ numero = st.radio(
     index=None,
 )
 
-st.write("Seleccionaste: ", numero)
+#st.write("Seleccionaste: ", numero)
 
 tiempo = st.radio(
     "Seleccione un tiempo: ",
@@ -82,6 +82,6 @@ tiempo = st.radio(
     index=None,
 )
 
-st.write("Seleccionaste: ", tiempo)
+#st.write("Seleccionaste: ", tiempo)
 
 st.write("El verbo conjugado es: ", conj_final(base,numero,persona,tiempo))
