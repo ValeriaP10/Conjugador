@@ -59,16 +59,6 @@ base = st.selectbox(
 
 # st.write("Seleccionaste: ", dict_que_esp[base])
 
-## menú desplegable para seleccionar persona
-
-persona = st.radio(
-    "Seleccione una persona: ",
-    ["primera inclusiva","primera exclusiva","segunda","tercera"],
-    index=None,
-)
-
-#st.write("Seleccionaste: ", persona)
-
 ## menú desplegable para seleccionar numero
 
 numero = st.radio(
@@ -78,6 +68,16 @@ numero = st.radio(
 )
 
 #st.write("Seleccionaste: ", numero)
+
+## menú desplegable para seleccionar persona
+
+persona = st.radio(
+    "Seleccione una persona: ",
+    ["primera inclusiva","primera exclusiva","segunda","tercera"],
+    index=None,
+)
+
+#st.write("Seleccionaste: ", persona)
 
 tiempo = st.radio(
     "Seleccione un tiempo: ",
