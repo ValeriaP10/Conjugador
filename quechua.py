@@ -88,14 +88,16 @@ numero = st.radio(
 
 persona = st.radio(
     "Seleccione una persona: ",
-    ["primera inclusiva","primera exclusiva","segunda","tercera"]
+    ["primera inclusiva","primera exclusiva","segunda","tercera"],
+    index=None,
 )
 
 #st.write("Seleccionaste: ", persona)
 
 tiempo = st.radio(
     "Seleccione un tiempo: ",
-    ["Presente simple","Presente progresivo","Presente habitual","Pasado experimentado simple","Pasado experimentado progresivo","Pasado experimentado habitual","Pasado no experimentado simple","Pasado no experimentado progres","Pasado no experimentado habitua"]
+    ["Presente simple","Presente progresivo","Presente habitual","Pasado experimentado simple","Pasado experimentado progresivo","Pasado experimentado habitual","Pasado no experimentado simple","Pasado no experimentado progres","Pasado no experimentado habitua"],
+    index=None,
 )
 
 #st.write("Seleccionaste: ", tiempo)
