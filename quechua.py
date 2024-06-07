@@ -2,6 +2,10 @@
 
 ## leemos el excel
 
+import pandas as pd
+
+verbos = pd.read_excel('verbos.xlsx')
+
 ##########################################################################
 ##########################################################################
 
@@ -34,10 +38,6 @@ def conj_final(base,numero,persona,tiempo):
 ##########################################################################
 
 ## diccionario
-
-import pandas as pd
-
-verbos = pd.read_excel('verbos.xlsx')
 
 quechua = list(verbos['quechua'])
 espanol = list(verbos['espanol'])
