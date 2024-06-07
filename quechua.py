@@ -35,6 +35,21 @@ dfp.set_index(c[0], inplace=True)
 dp = dfp.to_dict()
 
 def conj_final(base,numero,persona,tiempo):
+    if numero not in dp:
+        st.error(f"Clave '{numero}' no encontrada en el diccionario 'dp'.")
+        return
+    if persona not in dp[numero]:
+        st.error(f"Clave '{persona}' no encontrada en el diccionario anidado dentro de 'dp[{numero}]'.")
+        return
+    if tiempo not in D:
+        st.error(f"Clave '{tiempo}' no encontrada en el diccionario 'D'.")
+        return
+    if numero not in D[tiempo]:
+        st.error(f"Clave '{numero}' no encontrada en el diccionario anidado dentro de 'D[{tiempo}]'.")
+        return
+    if persona not in D[tiempo][numero]:
+        st.error(f"Clave '{persona}' no encontrada en el diccionario anidado dentro de 'D[{tiempo}][{numero}]'.")
+        return
     return dp[numero][persona] + ' ' + base + D[tiempo][numero][persona]
 
 ##########################################################################
