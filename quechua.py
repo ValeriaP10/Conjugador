@@ -2,9 +2,6 @@
 
 ## leemos el excel
 
-import pandas as pd
-verbos = pd.read_excel('verbos.xlsx')
-
 ##########################################################################
 ##########################################################################
 
@@ -37,6 +34,9 @@ def conj_final(base,numero,persona,tiempo):
 
 ## diccionario
 
+import pandas as pd
+verbos = pd.read_excel('verbos.xlsx')
+
 quechua = list(verbos['quechua'])
 espanol = list(verbos['espanol'])
 
@@ -58,7 +58,7 @@ base = st.selectbox(
 
 persona = st.radio(
     "Seleccione una persona: ",
-    ["primera inclusiva","primera exclusiva","segunda", "tercera"],
+    ["primera inclusiva","primera exclusiva","segunda","tercera"],
     index=None,
 )
 
@@ -68,7 +68,7 @@ persona = st.radio(
 
 numero = st.radio(
     "Seleccione un numero: ",
-    ["singular", "plural"],
+    ["singular","plural"],
     index=None,
 )
 
