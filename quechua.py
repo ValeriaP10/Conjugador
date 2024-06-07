@@ -79,7 +79,7 @@ base = st.selectbox(
 numero = st.radio(
     "Seleccione un numero: ",
     ["singular","plural"],
-    index=None,
+    index=0,
 )
 
 #st.write("Seleccionaste: ", numero)
@@ -89,7 +89,7 @@ numero = st.radio(
 persona = st.radio(
     "Seleccione una persona: ",
     ["primera inclusiva","primera exclusiva","segunda","tercera"],
-    index=None,
+    index=0,
 )
 
 #st.write("Seleccionaste: ", persona)
@@ -97,7 +97,7 @@ persona = st.radio(
 tiempo = st.radio(
     "Seleccione un tiempo: ",
     ["presente simple","presente progresivo","presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple","pasado no experimentado progresivo","pasado no experimentado habitual"],
-    index=None,
+    index=0,
 )
 
 #st.write("Seleccionaste: ", tiempo)
@@ -105,6 +105,13 @@ tiempo = st.radio(
 #resultado = conj_final(base,numero,persona,tiempo)
 #st.write("El verbo conjugado es: ", resultado)
 
-resultado = conj_final(base, numero, persona, tiempo)
-if resultado:
-    st.write("El verbo conjugado es: ", resultado)
+#resultado = conj_final(base, numero, persona, tiempo)
+#if resultado:
+    #st.write("El verbo conjugado es: ", resultado)
+
+if base and numero and persona and tiempo:
+    resultado = conj_final(base, numero, persona, tiempo)
+    if resultado:
+        st.write("El verbo conjugado es: ", resultado)
+else:
+    st.error("Por favor, asegúrese de que todas las opciones estén seleccionadas.")
