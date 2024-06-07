@@ -6,12 +6,13 @@
 ##########################################################################
 
 import pandas as pd
-quechua = pd.read_excel('quechua.xlsx')
-quechua = pd.ExcelFile('quechua.xlsx')
+
+quechua_suf = pd.read_excel('quechua.xlsx')
+quechua_suf = pd.ExcelFile('quechua.xlsx')
 D = {}
 
 
-for hoja in quechua.sheet_names: 
+for hoja in quechua_suf.sheet_names: 
     df = pd.read_excel('quechua.xlsx', sheet_name=hoja)     
     c = df.columns                                          
     df.set_index(c[0], inplace=True)                        
@@ -35,6 +36,7 @@ def conj_final(base,numero,persona,tiempo):
 ## diccionario
 
 import pandas as pd
+
 verbos = pd.read_excel('verbos.xlsx')
 
 quechua = list(verbos['quechua'])
