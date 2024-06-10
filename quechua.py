@@ -127,7 +127,7 @@ st.header('Resultado', divider='rainbow')
 st.markdown("""
 <style>
 .big-font {
-    font-size:100px !important;
+    font-size:50px !important;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -137,10 +137,8 @@ st.markdown("""
 if base and numero and persona and tiempo:
     resultado = conj_final(base, numero, persona, tiempo)
     if resultado:
-        st.write("El verbo conjugado es: ", resultado)
-        st.markdown('<p class="big-font">El verbo conjugado es: </p>', unsafe_allow_html=True)
+        st.write(f'<p style="font-size:24px;">El verbo conjugado es: {resultado}</p>', unsafe_allow_html=True)
 else:
     st.error("Por favor, asegúrese de que todas las opciones estén seleccionadas.")
 
-st.set_page_config(layout="wide")
 
