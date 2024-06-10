@@ -73,7 +73,7 @@ base = st.selectbox(
     quechua)
 
 if base.endswith('y'):
-    base = base.replace('y','')
+    base = base[:-1]
 
 # st.write("Seleccionaste: ", dict_que_esp[base])
 
