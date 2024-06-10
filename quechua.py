@@ -66,20 +66,24 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 import streamlit as st
 
-st.title(':purple[Conjugador de verbos en quechua]')
+st.title(':violet[Conjugador de verbos en quechua]')
 
 ## menú desplegable para seleccionar verbos
+
+st.header('Verbo', divider='rainbow')
 
 base = st.selectbox(
     "Seleccione un verbo en quechua: ",
     quechua)
 
+st.write("Seleccionaste: ", dict_que_esp[base])
+
 if base.endswith('y'):
     base = base[:-1]
 
-# st.write("Seleccionaste: ", dict_que_esp[base])
-
 ## menú desplegable para seleccionar numero
+
+st.header('Número', divider='rainbow')
 
 numero = st.radio(
     "Seleccione un numero: ",
@@ -91,6 +95,8 @@ numero = st.radio(
 
 ## menú desplegable para seleccionar persona
 
+st.header('Persona', divider='rainbow')
+
 persona = st.radio(
     "Seleccione una persona: ",
     ["primera inclusiva","primera exclusiva","segunda","tercera"],
@@ -98,6 +104,8 @@ persona = st.radio(
 )
 
 #st.write("Seleccionaste: ", persona)
+
+st.header('Tiempo', divider='rainbow')
 
 tiempo = st.radio(
     "Seleccione un tiempo: ",
