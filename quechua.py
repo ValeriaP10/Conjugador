@@ -109,7 +109,7 @@ st.header('Tiempo', divider='rainbow')
 
 tiempo = st.radio(
     "Seleccione un tiempo: ",
-    ["presente simple","presente progresivo","presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple","pasado no experimentado progres","pasado no experimentado habitua"],
+    ["presente 1","presente 2","presente 3","pasado experimentado 1","pasado experimentado 2","pasado experimentado 3","pasado no experimentado 1","pasado no experimentado 2","pasado no experimentado 3"],
     index=0,
 )
 
