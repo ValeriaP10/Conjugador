@@ -124,20 +124,14 @@ tiempo = st.radio(
     
 st.header('Resultado', divider='rainbow')
 
-st.markdown("""
-<style>
-.big-font {
-    font-size:50px !important;
-}
-</style>
-""", unsafe_allow_html=True)
 
 #st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
 
 if base and numero and persona and tiempo:
     resultado = conj_final(base, numero, persona, tiempo)
     if resultado:
-        st.write(f'<p style="font-size:24px;">El verbo conjugado es: {resultado}</p>', unsafe_allow_html=True)
+        st.write("El verbo conjugado es: ")
+        st.markdown(f'<p style="font-size:20px;">{resultado}</p>', unsafe_allow_html=True)
 else:
     st.error("Por favor, asegúrese de que todas las opciones estén seleccionadas.")
 
