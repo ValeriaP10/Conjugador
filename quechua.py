@@ -72,6 +72,9 @@ base = st.selectbox(
     "Seleccione un verbo en quechua: ",
     quechua)
 
+if base.endswith('y'):
+    base = base.remove('y')
+
 # st.write("Seleccionaste: ", dict_que_esp[base])
 
 ## menú desplegable para seleccionar numero
