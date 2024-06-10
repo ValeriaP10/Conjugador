@@ -66,6 +66,8 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 import streamlit as st
 
+st.title(':purple[Conjugador de verbos en quechua]')
+
 ## menú desplegable para seleccionar verbos
 
 base = st.selectbox(
