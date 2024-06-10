@@ -99,7 +99,7 @@ persona = st.radio(
 
 tiempo = st.radio(
     "Seleccione un tiempo: ",
-    ["presente simple","presente progresivo","presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple","pasado no experimentado progresivo","pasado no experimentado habitual"],
+    ["presente simple","presente progresivo","presente habitual","pasado experimentado simple","pasado experimentado progresivo","pasado experimentado habitual","pasado no experimentado simple","pasado no experimentado progres","pasado no experimentado habitua"],
     index=0,
 )
 
