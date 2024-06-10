@@ -122,7 +122,7 @@ tiempo = st.radio(
 #if resultado:
     #st.write("El verbo conjugado es: ", resultado)
     
-st.header('Resultado', divider='black')
+st.header('Resultado', divider='rainbow')
 
 if base and numero and persona and tiempo:
     resultado = conj_final(base, numero, persona, tiempo)
