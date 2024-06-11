@@ -143,12 +143,25 @@ explicaciones_tiempo = {
 }
 
 # Mostrar explicaciones
-st.write("### Explicaciones")
+#st.write("### Explicaciones")
+#explicacion_persona = st.selectbox("Seleccione una persona para ver la explicación:", list(explicaciones_persona.keys()))
+#explicacion_tiempo = st.selectbox("Seleccione un tiempo para ver la explicación:", list(explicaciones_tiempo.keys()))
+
+#st.write("Explicación de la persona seleccionada: ", explicaciones_persona[explicacion_persona])
+#st.write("Explicación del tiempo seleccionado: ", explicaciones_tiempo[explicacion_tiempo])
+
+# Mostrar explicaciones
+explicacion_persona_placeholder = st.empty()
+explicacion_tiempo_placeholder = st.empty()
+
 explicacion_persona = st.selectbox("Seleccione una persona para ver la explicación:", list(explicaciones_persona.keys()))
 explicacion_tiempo = st.selectbox("Seleccione un tiempo para ver la explicación:", list(explicaciones_tiempo.keys()))
 
-st.write("Explicación de la persona seleccionada: ", explicaciones_persona[explicacion_persona])
-st.write("Explicación del tiempo seleccionado: ", explicaciones_tiempo[explicacion_tiempo])
+if explicacion_persona:
+    explicacion_persona_placeholder.write("Explicación de persona seleccionada: " + explicaciones_persona[explicacion_persona])
+
+if explicacion_tiempo:
+    explicacion_tiempo_placeholder.write("Explicación de tiempo seleccionado: " + explicaciones_tiempo[explicacion_tiempo])
 
 st.header('Resultado', divider='rainbow')
 
