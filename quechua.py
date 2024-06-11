@@ -151,7 +151,7 @@ persona = st.selectbox("Seleccione una persona: ", list(explicaciones_persona.ke
 explicacion_persona_placeholder = st.empty()
 explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona])
 
-###### menú desplegable para seleccionar TIEMPO ######
+##################33 menú desplegable para seleccionar TIEMPO ###################
 
 st.header('Tiempo', divider='rainbow')
 
@@ -182,6 +182,8 @@ explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:*
 #st.write("Explicación de la persona seleccionada: ", explicaciones_persona[explicacion_persona])
 #st.write("Explicación del tiempo seleccionado: ", explicaciones_tiempo[explicacion_tiempo])
 
+################## RESULTADO ####################
+
 st.header('Resultado', divider='rainbow')
 
 #st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
@@ -190,8 +192,7 @@ if base and numero and persona and tiempo:
     resultado = conj_final(base, numero, persona, tiempo)
     if resultado:
         st.write("El verbo conjugado es: ")
-        st.markdown(f'<p style="font-size:24px; text-align:center;">{resultado}</p>', unsafe_allow_html=True)
+        with st.container():
+            st.markdown(f'<p style="font-size:24px; text-align:center;">{resultado}</p>', unsafe_allow_html=True)
 else:
     st.error("Por favor, asegúrese de que todas las opciones estén seleccionadas.")
-
-
