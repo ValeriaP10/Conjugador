@@ -151,7 +151,7 @@ persona = st.selectbox("Seleccione una persona: ", list(explicaciones_persona.ke
 explicacion_persona_placeholder = st.empty()
 explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona])
 
-##################33 menú desplegable para seleccionar TIEMPO ###################
+#################### menú desplegable para seleccionar TIEMPO ###################
 
 st.header('Tiempo', divider='rainbow')
 
@@ -196,3 +196,4 @@ if base and numero and persona and tiempo:
             st.markdown(f'<p style="font-size:24px; text-align:center;">{resultado}</p>', unsafe_allow_html=True)
 else:
     st.error("Por favor, asegúrese de que todas las opciones estén seleccionadas.")
+
