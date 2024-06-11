@@ -93,7 +93,7 @@ numero = st.radio(
 
 #st.write("Seleccionaste: ", numero)
 
-## menú desplegable para seleccionar persona
+## menú desplegable para seleccionar PERSONA
 
 st.header('Persona', divider='rainbow')
 
@@ -103,6 +103,12 @@ persona = st.radio(
     index=0,
 )
 
+with st.popover("Abre para responder dudas"):
+    st.markdown("Escribe el concepto que desconoces y obtén una explicación de este 😄")
+    name = st.text_input("Escribe el concepto")
+
+st.write("Explicación: ", name)
+    
 #st.write("Seleccionaste: ", persona)
 
 st.header('Tiempo', divider='rainbow')
