@@ -143,6 +143,7 @@ explicaciones_tiempo = {
 }
 
 # Mostrar explicaciones
+st.write("### Explicaciones")
 explicacion_persona = st.selectbox("Seleccione una persona para ver la explicación:", list(explicaciones_persona.keys()))
 explicacion_tiempo = st.selectbox("Seleccione un tiempo para ver la explicación:", list(explicaciones_tiempo.keys()))
 
