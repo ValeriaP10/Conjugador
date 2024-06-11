@@ -102,12 +102,6 @@ persona = st.radio(
     ["primera inclusiva","primera exclusiva","segunda","tercera"],
     index=0,
 )
-
-with st.popover("Abre para responder dudas"):
-    st.markdown("Escribe el concepto que desconoces y obtén una explicación de este 😄")
-    name = st.text_input("Escribe el concepto")
-
-st.write("Explicación: ", name)
     
 #st.write("Seleccionaste: ", persona)
 
@@ -127,9 +121,35 @@ tiempo = st.radio(
 #resultado = conj_final(base, numero, persona, tiempo)
 #if resultado:
     #st.write("El verbo conjugado es: ", resultado)
-    
-st.header('Resultado', divider='rainbow')
 
+# Diccionario de explicaciones
+explicaciones_persona = {
+    "primera inclusiva": "La primera persona inclusiva se refiere a 'nosotros', incluyendo a la persona con la que se habla.",
+    "primera exclusiva": "La primera persona exclusiva se refiere a 'nosotros', excluyendo a la persona con la que se habla.",
+    "segunda": "La segunda persona se refiere a 'tú' o 'usted'.",
+    "tercera": "La tercera persona se refiere a 'él', 'ella' o 'ellos'."
+}
+
+explicaciones_tiempo = {
+    "presente 1": "El presente 1 es el presente simple. Este se usa para describir acciones que ocurren regularmente a lo largo del tiempo.",
+    "presente 2": "El presente 2 es el presente progresivo. Este se usa para describir acciones que están ocurriendo en este momento.",
+    "presente 3": "El presente 3 es el presente habitual. Este se usa para describir acciones que se repiten en el tiempo de manera finita, como hábitos o rutinas.",
+    "pasado experimentado 1": "El pasado experimentado 1 es el pasado experimentado simple. Este se usa para describir acciones que ocurrieron en el pasado y que se conocen porque se experimentaron de primera mano.",
+    "pasado experimentado 2": "El pasado experimentado 2 es el pasado experimentado progresivo. Este se usa para describir acciones que estuvieron ocurriendo en el pasado y que se conocen porque se experimentaron de primera mano.",
+    "pasado experimentado 3": "El pasado experimentado 3 es el pasado experimentado habitual. Este se usa para describir acciones que ocurrían regularmente en el pasado y que se conocen porque se experimentaron de primera mano.",
+    "pasado no experimentado 1": "El pasado no experimentado 1 es el pasado no experimentado simple. Este se usa para describir acciones que ocurrieron en el pasado y que se conocen por información de segunda mano.",
+    "pasado no experimentado 2": "El pasado no experimentado 2 es el pasado no experimentado progresivo. Este se usa para describir acciones que estuvieron ocurriendo en el pasado y que se conocen por información de segunda mano.",
+    "pasado no experimentado 3": "El pasado no experimentado 3 es el pasado no experimentado habitual. Este se usa para describir acciones que ocurrían regularmente en el pasado y que se conocen por información de segunda mano."
+}
+
+# Mostrar explicaciones
+explicacion_persona = st.selectbox("Seleccione una persona para ver la explicación:", list(explicaciones_persona.keys()))
+explicacion_tiempo = st.selectbox("Seleccione un tiempo para ver la explicación:", list(explicaciones_tiempo.keys()))
+
+st.write("Explicación de la persona seleccionada: ", explicaciones_persona[explicacion_persona])
+st.write("Explicación del tiempo seleccionado: ", explicaciones_tiempo[explicacion_tiempo])
+
+st.header('Resultado', divider='rainbow')
 
 #st.markdown('<p class="big-font">Hello World !!</p>', unsafe_allow_html=True)
 
