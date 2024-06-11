@@ -81,7 +81,7 @@ st.write("Seleccionaste: ", dict_que_esp[base])
 if base.endswith('y'):
     base = base[:-1]
 
-## menú desplegable para seleccionar numero
+## menú desplegable para seleccionar NUMERO
 
 st.header('Número', divider='rainbow')
 
@@ -92,35 +92,6 @@ numero = st.radio(
 )
 
 #st.write("Seleccionaste: ", numero)
-
-## menú desplegable para seleccionar PERSONA
-
-st.header('Persona', divider='rainbow')
-
-persona = st.radio(
-    "Seleccione una persona: ",
-    ["primera inclusiva","primera exclusiva","segunda","tercera"],
-    index=0,
-)
-    
-#st.write("Seleccionaste: ", persona)
-
-st.header('Tiempo', divider='rainbow')
-
-tiempo = st.radio(
-    "Seleccione un tiempo: ",
-    ["presente 1","presente 2","presente 3","pasado experimentado 1","pasado experimentado 2","pasado experimentado 3","pasado no experimentado 1","pasado no experimentado 2","pasado no experimentado 3"],
-    index=0,
-)
-
-#st.write("Seleccionaste: ", tiempo)
-
-#resultado = conj_final(base,numero,persona,tiempo)
-#st.write("El verbo conjugado es: ", resultado)
-
-#resultado = conj_final(base, numero, persona, tiempo)
-#if resultado:
-    #st.write("El verbo conjugado es: ", resultado)
 
 # Diccionario de explicaciones
 explicaciones_persona = {
@@ -142,6 +113,45 @@ explicaciones_tiempo = {
     "pasado no experimentado 3": "El pasado no experimentado 3 es el pasado no experimentado habitual. Este se usa para describir acciones que ocurrían regularmente en el pasado y que se conocen por información de segunda mano."
 }
 
+###### menú desplegable para seleccionar PERSONA ######
+
+st.header('Persona', divider='rainbow')
+
+#persona = st.radio(
+    #"Seleccione una persona: ",
+    #["primera inclusiva","primera exclusiva","segunda","tercera"],
+    #index=0,
+#)
+    
+#st.write("Seleccionaste: ", persona)
+
+persona = st.radio("Seleccione una persona: ", list(explicaciones_persona.keys()), index=0)
+explicacion_persona_placeholder = st.empty()
+explicacion_persona_placeholder.write("Explicación de persona seleccionada: " + explicaciones_persona[persona])
+
+###### menú desplegable para seleccionar TIEMPO ######
+
+st.header('Tiempo', divider='rainbow')
+
+#tiempo = st.radio(
+    #"Seleccione un tiempo: ",
+    #["presente 1","presente 2","presente 3","pasado experimentado 1","pasado experimentado 2","pasado experimentado 3","pasado no experimentado 1","pasado no experimentado 2","pasado no experimentado 3"],
+    #index=0,
+#)
+
+#st.write("Seleccionaste: ", tiempo)
+
+tiempo = st.radio("Seleccione un tiempo: ", list(explicaciones_tiempo.keys()), index=0)
+explicacion_tiempo_placeholder = st.empty()
+explicacion_tiempo_placeholder.write("Explicación de tiempo seleccionado: " + explicaciones_tiempo[tiempo])
+
+#resultado = conj_final(base,numero,persona,tiempo)
+#st.write("El verbo conjugado es: ", resultado)
+
+#resultado = conj_final(base, numero, persona, tiempo)
+#if resultado:
+    #st.write("El verbo conjugado es: ", resultado)
+
 # Mostrar explicaciones
 #st.write("### Explicaciones")
 #explicacion_persona = st.selectbox("Seleccione una persona para ver la explicación:", list(explicaciones_persona.keys()))
@@ -149,19 +159,6 @@ explicaciones_tiempo = {
 
 #st.write("Explicación de la persona seleccionada: ", explicaciones_persona[explicacion_persona])
 #st.write("Explicación del tiempo seleccionado: ", explicaciones_tiempo[explicacion_tiempo])
-
-# Mostrar explicaciones
-explicacion_persona_placeholder = st.empty()
-explicacion_tiempo_placeholder = st.empty()
-
-explicacion_persona = st.selectbox("Seleccione una persona para ver la explicación:", list(explicaciones_persona.keys()))
-explicacion_tiempo = st.selectbox("Seleccione un tiempo para ver la explicación:", list(explicaciones_tiempo.keys()))
-
-if explicacion_persona:
-    explicacion_persona_placeholder.write("Explicación de persona seleccionada: " + explicaciones_persona[explicacion_persona])
-
-if explicacion_tiempo:
-    explicacion_tiempo_placeholder.write("Explicación de tiempo seleccionado: " + explicaciones_tiempo[explicacion_tiempo])
 
 st.header('Resultado', divider='rainbow')
 
