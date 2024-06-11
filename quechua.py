@@ -66,9 +66,17 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 import streamlit as st
 
+########### TÍTULO #############
+
 st.title(':violet[Conjugador de verbos en quechua]')
 
-## menú desplegable para seleccionar verbos
+########### INTRODUCCIÓN #############
+
+container = st.container(border=True)
+container.write("Esta página web tiene el objetivo de crear conjugaciones de los verbos quechuas más comunes. Al seleccionar un verbo, un número, una persona y un tiempo, se podrá obtener la forma final de dicho verbo con los sufijos correspondientes. Se ofrecen también explicaciones para algunos conceptos de persona y tiempo verbal que pueden resultar confusos. ¡Anímate a conocer más sobre el quechua! 😄")
+st.write("La variedad de la lengua usada en esta página web es el quechua chanca.")
+
+########### menú desplegable para seleccionar VERBOS #################
 
 st.header('Verbo', divider='rainbow')
 
@@ -81,7 +89,7 @@ st.write("Seleccionaste: ", dict_que_esp[base])
 if base.endswith('y'):
     base = base[:-1]
 
-## menú desplegable para seleccionar NUMERO
+############## menú desplegable para seleccionar NUMERO ##############
 
 st.header('Número', divider='rainbow')
 
