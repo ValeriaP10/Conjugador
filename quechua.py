@@ -125,7 +125,7 @@ st.header('Persona', divider='rainbow')
     
 #st.write("Seleccionaste: ", persona)
 
-persona = st.radio("Seleccione una persona: ", list(explicaciones_persona.keys()), index=0)
+persona = st.selectbox("Seleccione una persona: ", list(explicaciones_persona.keys()), index=0)
 explicacion_persona_placeholder = st.empty()
 explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona])
 
