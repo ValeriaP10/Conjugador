@@ -141,7 +141,7 @@ st.header('Tiempo', divider='rainbow')
 
 #st.write("Seleccionaste: ", tiempo)
 
-tiempo = st.radio("Seleccione un tiempo: ", list(explicaciones_tiempo.keys()), index=0)
+tiempo = st.selectbox("Seleccione un tiempo: ", list(explicaciones_tiempo.keys()), index=0)
 explicacion_tiempo_placeholder = st.empty()
 explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:** " + explicaciones_tiempo[tiempo])
 
