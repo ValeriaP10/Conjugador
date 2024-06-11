@@ -127,7 +127,7 @@ st.header('Persona', divider='rainbow')
 
 persona = st.radio("Seleccione una persona: ", list(explicaciones_persona.keys()), index=0)
 explicacion_persona_placeholder = st.empty()
-explicacion_persona_placeholder.write("Explicación de persona seleccionada: " + explicaciones_persona[persona])
+explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona])
 
 ###### menú desplegable para seleccionar TIEMPO ######
 
@@ -143,7 +143,7 @@ st.header('Tiempo', divider='rainbow')
 
 tiempo = st.radio("Seleccione un tiempo: ", list(explicaciones_tiempo.keys()), index=0)
 explicacion_tiempo_placeholder = st.empty()
-explicacion_tiempo_placeholder.write("Explicación de tiempo seleccionado: " + explicaciones_tiempo[tiempo])
+explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:** " + explicaciones_tiempo[tiempo])
 
 #resultado = conj_final(base,numero,persona,tiempo)
 #st.write("El verbo conjugado es: ", resultado)
