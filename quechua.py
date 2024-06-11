@@ -75,7 +75,7 @@ st.markdown(
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
     .title-font {
-        font-family: 'Ubuntu';
+        font-family: 'Arial';
         color: purple;
     }
     </style>
