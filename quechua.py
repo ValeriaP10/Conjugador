@@ -87,7 +87,7 @@ st.markdown(
 ########### INTRODUCCIÓN #############
 
 container = st.container(border=True)
-container.write("Esta página web tiene el objetivo de crear conjugaciones de los verbos quechuas más comunes. Al seleccionar un verbo, un número, una persona y un tiempo, se podrá obtener la forma final de dicho verbo con los sufijos correspondientes. Se ofrecen también explicaciones para algunos conceptos de persona y tiempo verbal que pueden resultar confusos. ¡Anímate a conocer más sobre el quechua! 😄")
+container.write("Esta página web tiene el objetivo de crear conjugaciones de los verbos quechuas más comunes. Al seleccionar un verbo, un número, una persona y un tiempo, se podrá obtener la forma conjugada de dicho verbo con los sufijos correspondientes. Se ofrecen también explicaciones para algunos conceptos de persona y tiempo verbal que pueden resultar confusos. ¡Anímate a conocer más sobre el quechua! 😄")
 st.write("*La variedad de la lengua usada en esta página web es el quechua chanca.")
 
 ########### menú desplegable para seleccionar VERBOS #################
@@ -108,7 +108,7 @@ if base.endswith('y'):
 st.header('Número', divider='rainbow')
 
 numero = st.radio(
-    "Seleccione un numero: ",
+    "Seleccione un número: ",
     ["singular","plural"],
     index=0,
 )
