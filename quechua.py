@@ -151,6 +151,9 @@ persona = st.selectbox("Seleccione una persona: ", list(explicaciones_persona.ke
 explicacion_persona_placeholder = st.empty()
 explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona])
 
+explicaciones_persona["primera inclusiva"] += "<br>Ejemplo: Nosotros (tú y yo), junto con María, vamos al mercado."
+explicaciones_persona["primera exclusiva"] += "<br>Ejemplo: Solo nosotros (tú y yo) vamos al mercado."
+
 #################### menú desplegable para seleccionar TIEMPO ###################
 
 st.header('Tiempo', divider='rainbow')
@@ -166,6 +169,9 @@ st.header('Tiempo', divider='rainbow')
 tiempo = st.selectbox("Seleccione un tiempo: ", list(explicaciones_tiempo.keys()), index=0)
 explicacion_tiempo_placeholder = st.empty()
 explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:** " + explicaciones_tiempo[tiempo])
+
+explicaciones_tiempo["presente 1"] += "<br>Ejemplo: Yo veo televisión."
+explicaciones_tiempo["presente 2"] += "<br>Ejemplo: Yo estoy viendo televisión."
 
 #resultado = conj_final(base,numero,persona,tiempo)
 #st.write("El verbo conjugado es: ", resultado)
