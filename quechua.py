@@ -152,7 +152,7 @@ explicacion_persona_placeholder = st.empty()
 explicaciones_persona["primera inclusiva"] += "<br>Ejemplo: Nosotros (tú y yo), junto con María, vamos al mercado."
 explicaciones_persona["primera exclusiva"] += "<br>Ejemplo: Solo nosotros (tú y yo) vamos al mercado."
 
-explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona])
+explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona], unsafe_allow_html=True)
 
 
 #################### menú desplegable para seleccionar TIEMPO ###################
