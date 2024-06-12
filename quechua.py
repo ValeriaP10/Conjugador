@@ -149,10 +149,11 @@ st.header('Persona', divider='rainbow')
 
 persona = st.selectbox("Seleccione una persona: ", list(explicaciones_persona.keys()), index=0)
 explicacion_persona_placeholder = st.empty()
-explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona])
-
 explicaciones_persona["primera inclusiva"] += "<br>Ejemplo: Nosotros (tú y yo), junto con María, vamos al mercado."
 explicaciones_persona["primera exclusiva"] += "<br>Ejemplo: Solo nosotros (tú y yo) vamos al mercado."
+
+explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona])
+
 
 #################### menú desplegable para seleccionar TIEMPO ###################
 
