@@ -3,7 +3,6 @@
 ## leemos el excel
 
 import pandas as pd
-import os
 
 verbos = pd.read_excel('verbos.xlsx')
 
@@ -91,18 +90,25 @@ container = st.container(border=True)
 container.write("Esta página web tiene el objetivo de crear conjugaciones de los verbos quechuas más comunes. Al seleccionar un verbo, un número, una persona y un tiempo, se podrá obtener la forma conjugada de dicho verbo con los sufijos correspondientes. Se ofrecen también explicaciones para algunos conceptos de persona y tiempo verbal que pueden resultar confusos. ¡Anímate a conocer más sobre el quechua! 😄")
 st.write("*La variedad de la lengua usada en esta página web es el quechua chanca.")
 
-image = 'mapa.jpg'
+from PIL import Image
+import os
 
 #st.image(image, caption='Mapa de Ayacucho', use_column_width=False, width=100)
 
-st.markdown(
+imagen = "mapa.jpg"  
+
+if os.path.exists(imagen):
+    image = Image.open(imagen)
+    st.markdown(
         f"""
         <div style="text-align: center;">
-            <{st.image(image, use_column_width=True)}" alt="Mapa de Ayacucho" style="width:200px;">
+            <img src="data:image/png;base64,{st.image(image, caption='Mapa de Ayacucho', width=150)}">
         </div>
         """,
         unsafe_allow_html=True
     )
+else:
+    st.error(f"La imagen no se encontró en la ruta especificada: {imagen}")
 
 ########### menú desplegable para seleccionar VERBOS #################
 
