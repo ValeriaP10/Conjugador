@@ -88,7 +88,7 @@ st.markdown(
 
 container = st.container(border=True)
 container.write("Esta página web tiene el objetivo de crear conjugaciones de los verbos quechuas más comunes. Al seleccionar un verbo, un número, una persona y un tiempo, se podrá obtener la forma conjugada de dicho verbo con los sufijos correspondientes. Se ofrecen también explicaciones para algunos conceptos de persona y tiempo verbal que pueden resultar confusos. ¡Anímate a conocer más sobre el quechua! 😄")
-st.write("*La variedad de la lengua usada en esta página web es el quechua chanca, hablado en la región de Ayacucho, en Perú.")
+st.write("*La variedad de la lengua usada en esta página web es el quechua chanca, hablado en la región de Ayacucho, Perú.")
 
 #st.image(image, caption='Mapa de Ayacucho', use_column_width=False, width=100)
 
@@ -130,12 +130,12 @@ explicaciones_tiempo = {
     "presente 1": "El presente 1 es el presente simple. Este se usa para describir acciones que ocurren regularmente a lo largo del tiempo.",
     "presente 2": "El presente 2 es el presente progresivo. Este se usa para describir acciones que están ocurriendo en este momento.",
     "presente 3": "El presente 3 es el presente habitual. Este se usa para describir acciones que se repiten en el tiempo de manera finita, como hábitos o rutinas.",
-    "pasado experimentado 1": "El pasado experimentado 1 es el pasado experimentado simple. Este se usa para describir acciones que ocurrieron en el pasado y que se conocen porque se experimentaron de primera mano.",
-    "pasado experimentado 2": "El pasado experimentado 2 es el pasado experimentado progresivo. Este se usa para describir acciones que estuvieron ocurriendo en el pasado y que se conocen porque se experimentaron de primera mano.",
-    "pasado experimentado 3": "El pasado experimentado 3 es el pasado experimentado habitual. Este se usa para describir acciones que ocurrían regularmente en el pasado y que se conocen porque se experimentaron de primera mano.",
-    "pasado no experimentado 1": "El pasado no experimentado 1 es el pasado no experimentado simple. Este se usa para describir acciones que ocurrieron en el pasado y que se conocen por información de segunda mano.",
-    "pasado no experimentado 2": "El pasado no experimentado 2 es el pasado no experimentado progresivo. Este se usa para describir acciones que estuvieron ocurriendo en el pasado y que se conocen por información de segunda mano.",
-    "pasado no experimentado 3": "El pasado no experimentado 3 es el pasado no experimentado habitual. Este se usa para describir acciones que ocurrían regularmente en el pasado y que se conocen por información de segunda mano."
+    "pasado experimentado 1": "El pasado experimentado 1 es el pasado experimentado simple. Este se usa para describir acciones que ocurrieron en el pasado y que le constan al sujeto por ser testigo directo de la acción.",
+    "pasado experimentado 2": "El pasado experimentado 2 es el pasado experimentado progresivo. Este se usa para describir acciones que estuvieron ocurriendo en el pasado y que le constan al sujeto por ser testigo directo de la acción.",
+    "pasado experimentado 3": "El pasado experimentado 3 es el pasado experimentado habitual. Este se usa para describir acciones que ocurrían regularmente en el pasado y que le constan al sujeto por ser testigo directo de la acción.",
+    "pasado no experimentado 1": "El pasado no experimentado 1 es el pasado no experimentado simple. Este se usa para describir acciones que ocurrieron en el pasado sin la participación o el conocimiento directo del sujeto.",
+    "pasado no experimentado 2": "El pasado no experimentado 2 es el pasado no experimentado progresivo. Este se usa para describir acciones que estuvieron ocurriendo en el pasado sin la participación o el conocimiento directo del sujeto.",
+    "pasado no experimentado 3": "El pasado no experimentado 3 es el pasado no experimentado habitual. Este se usa para describir acciones que ocurrían regularmente en el pasado sin la participación o el conocimiento directo del sujeto."
 }
 
 ###### menú desplegable para seleccionar PERSONA ######
@@ -152,8 +152,8 @@ st.header('Persona', divider='rainbow')
 
 persona = st.selectbox("Seleccione una persona: ", list(explicaciones_persona.keys()), index=0)
 explicacion_persona_placeholder = st.empty()
-explicaciones_persona["primera inclusiva"] += "<br><br>Ejemplo: Nosotros (tú y yo), junto con María, vamos al mercado."
-explicaciones_persona["primera exclusiva"] += "<br><br>Ejemplo: Solo nosotros (tú y yo) vamos al mercado."
+explicaciones_persona["primera inclusiva"] += "<br><br>Ejemplo: 'Nosotros (tú, yo y el resto) vamos al mercado.'"
+explicaciones_persona["primera exclusiva"] += "<br><br>Ejemplo: 'Solo nosotros (tú y yo) vamos al mercado.'"
 
 explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona], unsafe_allow_html=True)
 
@@ -172,15 +172,15 @@ st.header('Tiempo', divider='rainbow')
 
 tiempo = st.selectbox("Seleccione un tiempo: ", list(explicaciones_tiempo.keys()), index=0)
 explicacion_tiempo_placeholder = st.empty()
-explicaciones_tiempo["presente 1"] += "<br><br>Ejemplo: Yo veo televisión."
-explicaciones_tiempo["presente 2"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
-explicaciones_tiempo["presente 3"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
-explicaciones_tiempo["pasado experimentado 1"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
-explicaciones_tiempo["pasado experimentado 2"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
-explicaciones_tiempo["pasado experimentado 3"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
-explicaciones_tiempo["pasado no experimentado 1"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
-explicaciones_tiempo["pasado no experimentado 2"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
-explicaciones_tiempo["pasado no experimentado 3"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["presente 1"] += "<br><br>Ejemplo: 'Yo veo televisión.'"
+explicaciones_tiempo["presente 2"] += "<br><br>Ejemplo: 'Yo estoy viendo televisión.'"
+explicaciones_tiempo["presente 3"] += "<br><br>Ejemplo: 'Yo suelo ver televisión.'"
+explicaciones_tiempo["pasado experimentado 1"] += "<br><br>Ejemplo: 'Yo veía televisión.'"
+explicaciones_tiempo["pasado experimentado 2"] += "<br><br>Ejemplo: 'Yo estaba viendo televisión.'"
+explicaciones_tiempo["pasado experimentado 3"] += "<br><br>Ejemplo: 'Yo solía ver televisión.'"
+explicaciones_tiempo["pasado no experimentado 1"] += "<br><br>Ejemplo: '(Dicen que) Yo veía televisión.'"
+explicaciones_tiempo["pasado no experimentado 2"] += "<br><br>Ejemplo: '(Dicen que) Yo estaba viendo televisión.'"
+explicaciones_tiempo["pasado no experimentado 3"] += "<br><br>Ejemplo: '(Dicen que) Yo solía ver televisión.'"
 
 explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:** " + explicaciones_tiempo[tiempo], unsafe_allow_html=True)
 
