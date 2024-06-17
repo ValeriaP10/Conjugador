@@ -95,7 +95,7 @@ from PIL import Image
 
 image = Image.open('mapa.jpg')
 
-st.image(image, caption='Mapa de Ayacucho', width=100)
+st.image(image, caption='Mapa de Ayacucho', width=200)
 
 ########### menú desplegable para seleccionar VERBOS #################
 
