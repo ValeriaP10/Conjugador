@@ -150,7 +150,7 @@ st.header('Persona', divider='rainbow')
 persona = st.selectbox("Seleccione una persona: ", list(explicaciones_persona.keys()), index=0)
 explicacion_persona_placeholder = st.empty()
 explicaciones_persona["primera inclusiva"] += "<br><br>Ejemplo: Nosotros (tú y yo), junto con María, vamos al mercado."
-explicaciones_persona["primera exclusiva"] += "<br>Ejemplo: Solo nosotros (tú y yo) vamos al mercado."
+explicaciones_persona["primera exclusiva"] += "<br><br>Ejemplo: Solo nosotros (tú y yo) vamos al mercado."
 
 explicacion_persona_placeholder.markdown("**Explicación de persona seleccionada:** " + explicaciones_persona[persona], unsafe_allow_html=True)
 
@@ -169,8 +169,15 @@ st.header('Tiempo', divider='rainbow')
 
 tiempo = st.selectbox("Seleccione un tiempo: ", list(explicaciones_tiempo.keys()), index=0)
 explicacion_tiempo_placeholder = st.empty()
-explicaciones_tiempo["presente 1"] += "<br>Ejemplo: Yo veo televisión."
-explicaciones_tiempo["presente 2"] += "<br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["presente 1"] += "<br><br>Ejemplo: Yo veo televisión."
+explicaciones_tiempo["presente 2"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["presente 3"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["pasado experimentado 1"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["pasado experimentado 2"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["pasado experimentado 3"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["pasado no experimentado 1"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["pasado no experimentado 2"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
+explicaciones_tiempo["pasado no experimentado 3"] += "<br><br>Ejemplo: Yo estoy viendo televisión."
 
 explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:** " + explicaciones_tiempo[tiempo], unsafe_allow_html=True)
 
