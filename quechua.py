@@ -95,7 +95,7 @@ import os
 
 #st.image(image, caption='Mapa de Ayacucho', use_column_width=False, width=100)
 
-imagen = "mapa.jpg"  
+imagen = "C:/Users/VALERIA/OneDrive/Documentos/GitHub/Conjugador/mapa.jpg"  
 
 if os.path.exists(imagen):
     image = Image.open(imagen)
