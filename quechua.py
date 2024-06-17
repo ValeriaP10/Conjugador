@@ -95,7 +95,16 @@ from PIL import Image
 
 image = Image.open('mapa.jpg')
 
-st.image(image, caption='Mapa de Ayacucho', use_column_width=False, width=100, )
+#st.image(image, caption='Mapa de Ayacucho', use_column_width=False, width=100)
+
+st.markdown(
+        f"""
+        <div style="text-align: center;">
+            <img src="data:image/png;base64,{st.image(image, use_column_width=True)}" alt="Mapa de Ayacucho" style="width:200px;">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
 ########### menú desplegable para seleccionar VERBOS #################
 
