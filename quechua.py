@@ -184,8 +184,6 @@ explicaciones_tiempo["pasado no experimentado 3"] += "<br><br>Ejemplo: '(Dicen q
 
 explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:** " + explicaciones_tiempo[tiempo], unsafe_allow_html=True)
 
-
-
 #resultado = conj_final(base,numero,persona,tiempo)
 #st.write("El verbo conjugado es: ", resultado)
 
