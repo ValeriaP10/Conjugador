@@ -98,7 +98,7 @@ image = 'mapa.jpg'
 st.markdown(
         f"""
         <div style="text-align: center;">
-            <img src="data:image/png;base64,{st.image(image, use_column_width=True)}" alt="Mapa de Ayacucho" style="width:200px;">
+            <{st.image(image, use_column_width=True)}" alt="Mapa de Ayacucho" style="width:200px;">
         </div>
         """,
         unsafe_allow_html=True
