@@ -66,6 +66,19 @@ dict_que_esp = dict(zip(quechua,espanol))
 
 import streamlit as st
 
+################## TEMA #####################
+
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #f0f2f6;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 ########### TÍTULO #############
 
 #st.title(':violet[Conjugador de verbos en quechua]')
