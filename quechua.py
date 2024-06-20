@@ -70,17 +70,16 @@ import streamlit as st
 
 ################## TEMA #####################
 
-st.markdown(
-    """
-    <style>
-    body {
-        background-image: url('https://elcomercio.pe/resizer/rj2o7ZOIf9AVVqODmYArPzVjRD4=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/P3OOSJ44XNA4BHSHEPOCIV5LI4.jpg');
-        background-size: cover;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+page_bg_img = '''
+<style>
+body {
+background-image: url("https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2020/09/13172228/arco-ayacucho.jpg");
+background-size: cover;
+}
+</style>
+'''
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 ########### TÍTULO #############
 
@@ -93,6 +92,7 @@ st.markdown(
     .title-font {
         font-family: 'Arial';
         color: purple;
+        text-align: center;
     }
     </style>
     <h1 class="title-font">Conjugador de verbos en quechua</h1>
