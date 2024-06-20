@@ -85,16 +85,9 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Título personalizado
-st.markdown(
-    """
-    <h1 class="title-font">Conjugador de verbos en quechua</h1>
-    """,
-    unsafe_allow_html=True,
-)
 
 # Cargar imagen usando PIL
-ruta_imagen = "C:/Users/TuNombreDeUsuario/Downloads/sunrise.jpg"  # Cambia esto por la ruta correcta a tu imagen
+ruta_imagen = "C:/Users/VALERIA/Downloads/Sacred_Valley_(around_Pisaq),_Peru.jpg"  # Cambia esto por la ruta correcta a tu imagen
 
 if os.path.exists(ruta_imagen):
     image = Image.open(ruta_imagen)
@@ -116,7 +109,7 @@ else:
 st.markdown(
     """
     <style>
-    @import url('https://www.google.com/imgres?q=quechua&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1c%2FSacred_Valley_%2528around_Pisaq%2529%252C_Peru.jpg&imgrefurl=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FQuechua_(regi%25C3%25B3n)&docid=04vNLZJAu4g2bM&tbnid=sob0VIsTvO1wLM&vet=12ahUKEwiXy6-rmuuGAxXwK7kGHdTRAA8QM3oECBYQAA..i&w=4672&h=3104&hcb=2&ved=2ahUKEwiXy6-rmuuGAxXwK7kGHdTRAA8QM3oECBYQAA');
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap);
     .title-font {
         font-family: 'Arial';
         color: purple;
