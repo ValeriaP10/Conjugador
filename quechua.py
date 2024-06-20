@@ -70,16 +70,29 @@ import streamlit as st
 
 ################## TEMA #####################
 
-page_bg_img = '''
-<style>
-body {
-background-image: url("https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2020/09/13172228/arco-ayacucho.jpg");
-background-size: cover;
-}
-</style>
-'''
+import base64
 
-st.markdown(page_bg_img, unsafe_allow_html=True)
+@st.cache(allow_output_mutation=True)
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+def set_png_as_page_bg(jpg_file):
+    bin_str = get_base64_of_bin_file(jpg_file)
+    page_bg_img = '''
+    <style>
+    body {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    return
+
+set_png_as_page_bg('arco-ayacucho.jpg')
 
 ########### TÍTULO #############
 
@@ -90,7 +103,7 @@ st.markdown(
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap);
     .title-font {
-        font-family: 'Arial';
+        font-family: 'Times New Roman';
         color: purple;
         text-align: center;
     }
