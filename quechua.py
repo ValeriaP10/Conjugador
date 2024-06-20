@@ -74,33 +74,13 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #f0f2f6;
-    }
-    .title-font {
-        font-family: 'Lobster', cursive;
-        color: purple;
+        background-image: url('https://elcomercio.pe/resizer/rj2o7ZOIf9AVVqODmYArPzVjRD4=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/P3OOSJ44XNA4BHSHEPOCIV5LI4.jpg');
+        background-size: cover;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
-
-
-# Cargar imagen usando PIL
-ruta_imagen = "C:/Users/VALERIA/Downloads/Sacred_Valley_(around_Pisaq),_Peru.jpg"  # Cambia esto por la ruta correcta a tu imagen
-
-if os.path.exists(ruta_imagen):
-    image = Image.open(ruta_imagen)
-    st.markdown(
-        f"""
-        <div style="text-align: center;">
-            <img src="data:image/png;base64,{st.image(image, caption='Sunrise by the mountains', width=200)}">
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-else:
-    st.error(f"La imagen no se encontró en la ruta especificada: {ruta_imagen}")
 
 ########### TÍTULO #############
 
