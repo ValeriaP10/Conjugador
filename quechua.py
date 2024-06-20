@@ -101,7 +101,7 @@ set_png_as_page_bg('arco-ayacucho.jpg')
 st.markdown(
     """
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap);
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
     .title-font {
         font-family: 'Comic Sans';
         color: purple;
