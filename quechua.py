@@ -3,6 +3,8 @@
 ## leemos el excel
 
 import pandas as pd
+from PIL import Image
+import os
 
 verbos = pd.read_excel('verbos.xlsx')
 
@@ -72,12 +74,40 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #d3faf7;
+        background-color: #f0f2f6;
+    }
+    .title-font {
+        font-family: 'Lobster', cursive;
+        color: purple;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
+# Título personalizado
+st.markdown(
+    """
+    <h1 class="title-font">Conjugador de verbos en quechua</h1>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Cargar imagen usando PIL
+ruta_imagen = "C:/Users/TuNombreDeUsuario/Downloads/sunrise.jpg"  # Cambia esto por la ruta correcta a tu imagen
+
+if os.path.exists(ruta_imagen):
+    image = Image.open(ruta_imagen)
+    st.markdown(
+        f"""
+        <div style="text-align: center;">
+            <img src="data:image/png;base64,{st.image(image, caption='Sunrise by the mountains', width=200)}">
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+else:
+    st.error(f"La imagen no se encontró en la ruta especificada: {ruta_imagen}")
 
 ########### TÍTULO #############
 
@@ -86,7 +116,7 @@ st.markdown(
 st.markdown(
     """
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    @import url('https://www.google.com/imgres?q=quechua&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F1c%2FSacred_Valley_%2528around_Pisaq%2529%252C_Peru.jpg&imgrefurl=https%3A%2F%2Fes.wikipedia.org%2Fwiki%2FQuechua_(regi%25C3%25B3n)&docid=04vNLZJAu4g2bM&tbnid=sob0VIsTvO1wLM&vet=12ahUKEwiXy6-rmuuGAxXwK7kGHdTRAA8QM3oECBYQAA..i&w=4672&h=3104&hcb=2&ved=2ahUKEwiXy6-rmuuGAxXwK7kGHdTRAA8QM3oECBYQAA');
     .title-font {
         font-family: 'Arial';
         color: purple;
