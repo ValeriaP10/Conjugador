@@ -3,7 +3,6 @@
 ## leemos el excel
 
 import pandas as pd
-from PIL import Image
 import os
 
 verbos = pd.read_excel('verbos.xlsx')
@@ -72,27 +71,35 @@ import streamlit as st
 
 import base64
 
-@st.cache(allow_output_mutation=True)
-def get_base64_of_bin_file(bin_file):
-    with open(bin_file, 'rb') as f:
-        data = f.read()
-    return base64.b64encode(data).decode()
+# Función para convertir la imagen a base64
+def get_base64_of_image(image_path):
+    with open(image_path, "rb") as image_file:
+        return base64.b64encode(image_file.read()).decode()
 
-def set_png_as_page_bg(jpg_file):
-    bin_str = get_base64_of_bin_file(jpg_file)
-    page_bg_img = '''
+# Ruta a la imagen de fondo
+ruta_imagen_fondo = "C:/Users/VALERIA/OneDrive/Documentos/GitHub/Conjugador/arco-ayacucho.jpg"  # Cambia esto por la ruta correcta a tu imagen
+
+# Verifica que la imagen exista
+if os.path.exists(ruta_imagen_fondo):
+    imagen_fondo_base64 = get_base64_of_image(ruta_imagen_fondo)
+else:
+    st.error(f"La imagen no se encontró en la ruta especificada: {ruta_imagen_fondo}")
+    imagen_fondo_base64 = ""
+
+st.markdown(
+    f"""
     <style>
-    body {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
-    }
+    body {{
+        background-color: #f0f2f6;
+        background-image: url("data:image/jpeg;base64,{imagen_fondo_base64}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }}
     </style>
-    ''' % bin_str
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
-
-set_png_as_page_bg('arco-ayacucho.jpg')
+    """,
+    unsafe_allow_html=True
+)
 
 ########### TÍTULO #############
 
@@ -103,7 +110,7 @@ st.markdown(
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
     .title-font {
-        font-family: 'Comic Sans';
+        font-family: 'Arial';
         color: purple;
         text-align: center;
     }
