@@ -131,7 +131,7 @@ st.write("*La variedad de la lengua usada en esta página web es el quechua chan
 st.markdown(
     """
     <style>
-    stHeader > div {{
+    st.Header > div {{
         border-bottom: 2px solid black;
     }}
     </style>
