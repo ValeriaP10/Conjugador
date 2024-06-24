@@ -128,7 +128,7 @@ st.write("*La variedad de la lengua usada en esta página web es el quechua chan
 
 ########### menú desplegable para seleccionar VERBOS #################
 
-st.header('Verbo')
+st.header('Verbo', divider='black')
 
 base = st.selectbox(
     "Seleccione un verbo en quechua: ",
