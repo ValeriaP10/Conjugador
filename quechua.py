@@ -159,7 +159,7 @@ st.markdown(
         padding: 20px;
         border-radius: 10px;
         border: 1px solid #ddd;
-        margin-bottom: 20px; /* Añadir espacio debajo del contenedor */
+        margin-bottom: 10px; /* Añadir espacio debajo del contenedor */
     }
     .outside-text {
         margin-top: 20px; /* Añadir espacio arriba del texto */
