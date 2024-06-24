@@ -74,6 +74,10 @@ page_bg_img = """
 [data-testid="stAppViewContainer"] {
 background-color: #E8FFF2;
 }
+
+[data-testid="stHeader"] {
+background-color: rgba(0, 0, 0, 0);
+}
 </style>
 """
 
