@@ -174,7 +174,7 @@ st.markdown(
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%; /* Ajusta este valor para cambiar el tamaño de la imagen */
+        width: 80%; /* Ajusta este valor para cambiar el tamaño de la imagen */
     }
     </style>
     """,
