@@ -69,37 +69,22 @@ import streamlit as st
 
 ################## TEMA #####################
 
-import base64
-
-# Función para convertir la imagen a base64
-def get_base64_of_image(image_path):
-    with open(image_path, "rb") as image_file:
-        return base64.b64encode(image_file.read()).decode()
-
-# Ruta a la imagen de fondo
-ruta_imagen_fondo = "C:/Users/VALERIA/OneDrive/Documentos/GitHub/Conjugador/arco-ayacucho.jpg"  # Cambia esto por la ruta correcta a tu imagen
-
-# Verifica que la imagen exista
-if os.path.exists(ruta_imagen_fondo):
-    imagen_fondo_base64 = get_base64_of_image(ruta_imagen_fondo)
-else:
-    st.error(f"La imagen no se encontró en la ruta especificada: {ruta_imagen_fondo}")
-    imagen_fondo_base64 = ""
-
-st.markdown(
-    f"""
-    <style>
-    body {{
-        background-color: #64F73F;
-        background-image: url("data:image/jpeg;base64,{imagen_fondo_base64}");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] > .main {{
+    background-image: url("https://i.postimg.cc/4xgNnkfX/Untitled-design.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: local;
     }}
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+[data-testid="stHeader"] {{
+    background: rgba(0,0,0,0);
+}}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 ########### TÍTULO #############
 
