@@ -128,9 +128,6 @@ st.write("*La variedad de la lengua usada en esta página web es el quechua chan
 
 ########### menú desplegable para seleccionar VERBOS #################
 
-st.header('Verbo', divider='rainbow')
-
-# CSS para cambiar el color del divisor y el fondo de la página
 st.markdown(
     """
     <style>
@@ -141,6 +138,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+st.header('Verbo')
 
 base = st.selectbox(
     "Seleccione un verbo en quechua: ",
