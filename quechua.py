@@ -165,7 +165,6 @@ st.markdown(
 )
 
 ruta_imagen_local = "arco-ayacucho.jpg"
-st.image(ruta_imagen_local, use_column_width=True)
 
 # CSS para centrar la imagen y ajustar su tamaño
 st.markdown(
