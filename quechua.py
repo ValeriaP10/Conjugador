@@ -69,33 +69,30 @@ import streamlit as st
 
 ################## TEMA #####################
 
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+background-color: #e5e5f7;
+}
+</style>
+"""
+
+#st.markdown(page_bg_img, unsafe_allow_html=True)
+
 #page_bg_img = """
 #<style>
 #[data-testid="stAppViewContainer"] {
-#background-color: #e5e5f7;
-#opacity: 0.4;
-#background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
-#background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+#background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVYk_ZdjOviMt9YFiLlMd-h7yHzYzakEhLw&s);
+#bacground-size: cover;
+#}
+
+#[data-testid="stHeader"] {
+#background-color: rgba(0, 0, 0, 0);
 #}
 #</style>
 #"""
 
 #st.markdown(page_bg_img, unsafe_allow_html=True)
-
-page_bg_img = """
-<style>
-[data-testid="stAppViewContainer"] {
-background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVYk_ZdjOviMt9YFiLlMd-h7yHzYzakEhLw&s);
-bacground-size: cover;
-}
-
-[data-testid="stHeader"] {
-background-color: rgba(0, 0, 0, 0);
-}
-</style>
-"""
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
 
 ########### TÍTULO #############
 
