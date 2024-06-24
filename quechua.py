@@ -90,7 +90,7 @@ st.markdown(
     f"""
     <style>
     body {{
-        background-color: #d3faf7;
+        background-color: #64F73F;
         background-image: url("data:image/jpeg;base64,{imagen_fondo_base64}");
         background-size: cover;
         background-repeat: no-repeat;
