@@ -133,6 +133,7 @@ st.markdown(
         border-radius: 10px;
         border: 1px solid #ddd;
         margin-bottom: 5px; /* Añadir espacio debajo del contenedor */
+        text-align: justify; 
     }
     .outside-text {
         margin-top: 20px; /* Añadir espacio arriba del texto */
@@ -243,6 +244,17 @@ st.header('Tiempo', divider='rainbow')
 
 #st.write("Seleccionaste: ", tiempo)
 
+st.markdown(
+    """
+    <style>
+    .justified-text {
+        text-align: justify;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 tiempo = st.selectbox("Seleccione un tiempo: ", list(explicaciones_tiempo.keys()), index=0)
 explicacion_tiempo_placeholder = st.empty()
 explicaciones_tiempo["presente 1"] += "<br><br>Ejemplo: 'Yo veo televisión.'"
@@ -257,6 +269,13 @@ explicaciones_tiempo["pasado no experimentado 3"] += "<br><br>Ejemplo: '(Dicen q
 
 explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:** " + explicaciones_tiempo[tiempo], unsafe_allow_html=True)
 
+explicacion_tiempo_placeholder.markdown(f"""
+    **Explicación de tiempo seleccionado:** 
+    <div class="justified-text">
+        {explicaciones_tiempo[tiempo]}
+    </div>
+    """, unsafe_allow_html=True)
+    
 #resultado = conj_final(base,numero,persona,tiempo)
 #st.write("El verbo conjugado es: ", resultado)
 
