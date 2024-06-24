@@ -268,13 +268,6 @@ explicaciones_tiempo["pasado no experimentado 2"] += "<br><br>Ejemplo: '(Dicen q
 explicaciones_tiempo["pasado no experimentado 3"] += "<br><br>Ejemplo: '(Dicen que) Yo solía ver televisión.'"
 
 explicacion_tiempo_placeholder.markdown("**Explicación de tiempo seleccionado:** " + explicaciones_tiempo[tiempo], unsafe_allow_html=True)
-
-explicacion_tiempo_placeholder.markdown(f"""
-    **Explicación de tiempo seleccionado:** 
-    <div class="justified-text">
-        {explicaciones_tiempo[tiempo]}
-    </div>
-    """, unsafe_allow_html=True)
     
 #resultado = conj_final(base,numero,persona,tiempo)
 #st.write("El verbo conjugado es: ", resultado)
