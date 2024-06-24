@@ -110,6 +110,7 @@ st.markdown(
         font-family: 'Lobster';
         color: purple;
         text-align: center;
+        font-size: 50px;
     }
     </style>
     <h1 class="title-font">Conjugador de verbos en quechua</h1>
