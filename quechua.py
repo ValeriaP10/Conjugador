@@ -88,6 +88,10 @@ page_bg_img = """
 background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCVYk_ZdjOviMt9YFiLlMd-h7yHzYzakEhLw&s);
 bacground-size: cover;
 }
+
+[data-testid="stHeader"] {
+background-color: rgba(0, 0, 0, 0);
+}
 </style>
 """
 
