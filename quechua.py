@@ -77,7 +77,7 @@ background-color: #4B4BF0;
 </style>
 """
 
-#st.markdown(page_bg_img, unsafe_allow_html=True)
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 #page_bg_img = """
 #<style>
