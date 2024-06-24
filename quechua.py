@@ -107,7 +107,7 @@ st.markdown(
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
     .title-font {
-        font-family: 'Arial';
+        font-family: 'Times New Roman';
         color: purple;
         text-align: center;
     }
