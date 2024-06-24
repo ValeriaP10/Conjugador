@@ -73,6 +73,7 @@ page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
 background-color: #E8FFF2;
+opacity:0.2;
 filter: blur(20px);
 }
 </style>
