@@ -72,7 +72,7 @@ import streamlit as st
 page_bg_img = """
 <style>
 [data-testid="stAppViewContainer"] {
-background-color: #4B4BF0;
+background-color: #E8FFF2;
 }
 </style>
 """
