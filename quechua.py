@@ -124,6 +124,31 @@ container = st.container(border=True)
 container.write("Esta página web tiene el objetivo de crear conjugaciones de los verbos quechuas más comunes. Al seleccionar un verbo, un número, una persona y un tiempo, se podrá obtener la forma conjugada de dicho verbo con los sufijos correspondientes. Se ofrecen también explicaciones para algunos conceptos de persona y tiempo verbal que pueden resultar confusos. ¡Anímate a conocer más sobre el quechua! 😄")
 st.write("*La variedad de la lengua usada en esta página web es el quechua chanca, hablado en la región de Ayacucho, Perú.")
 
+st.markdown(
+    """
+    <style>
+    .custom-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Contenedor personalizado con CSS
+st.markdown(
+    """
+    <div class="custom-container">
+        <p>Esta página web tiene el objetivo de crear conjugaciones de los verbos quechuas más comunes. Al seleccionar un verbo, un número, una persona y un tiempo, se podrá obtener la forma conjugada de dicho verbo con los sufijos correspondientes. Se ofrecen también explicaciones para algunos conceptos de persona y tiempo verbal que pueden resultar confusos. ¡Anímate a conocer más sobre el quechua! 😄</p>
+        <p>*La variedad de la lengua usada en esta página web es el quechua chanca, hablado en la región de Ayacucho, Perú.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 #st.image(image, caption='Mapa de Ayacucho', use_column_width=False, width=100)
 
 
