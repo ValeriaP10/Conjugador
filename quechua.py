@@ -69,23 +69,18 @@ import streamlit as st
 
 ################## TEMA #####################
 
-st.markdown(
-    """
-    <style>
-    [data-testid="stAppViewContainer"] > .main {{
-        background-image: url("https://i.postimg.cc/4xgNnkfX/Untitled-design.png");
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: local;
-        }}
-    [data-testid="stHeader"] {{
-        background: rgba(0,0,0,0);
-    }}
-    </style>
-    """, 
-    unsafe_allow_html=True,
-)
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+background-color: #e5e5f7;
+opacity: 0.8;
+background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#444cf7 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px) -1px 0;
+background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+}
+</style>
+"""
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
 
 ########### TÍTULO #############
 
