@@ -164,8 +164,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-#st.image(image, caption='Mapa de Ayacucho', use_column_width=False, width=100)
-
+ruta_imagen_local = "arco-ayacucho.jpg"
+st.image(ruta_imagen_local, use_column_width=True)
 
 ########### menú desplegable para seleccionar VERBOS #################
 
