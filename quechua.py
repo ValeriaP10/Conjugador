@@ -107,7 +107,7 @@ st.markdown(
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
     .title-font {
-        font-family: 'Average';
+        font-family: 'Calibri';
         color: purple;
         text-align: center;
         font-size: 50px;
