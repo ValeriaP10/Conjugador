@@ -164,27 +164,27 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-ruta_imagen_local = "arco-ayacucho.jpg"
+#ruta_imagen_local = "arco-ayacucho.jpg"
 
 # CSS para centrar la imagen y ajustar su tamaño
-st.markdown(
-    """
-    <style>
-    .centered-image {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 80%; /* Ajusta este valor para cambiar el tamaño de la imagen */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+#st.markdown(
+#    """
+#    <style>
+#    .centered-image {
+#        display: block;
+#        margin-left: auto;
+#        margin-right: auto;
+#        width: 80%; /* Ajusta este valor para cambiar el tamaño de la imagen */
+#    }
+#    </style>
+#    """,
+#    unsafe_allow_html=True
+#)
 
 # HTML para mostrar la imagen centrada
-st.markdown(f"""
-    <img src="{ruta_imagen_local}" class="centered-image">
-    """, unsafe_allow_html=True)
+#st.markdown(f"""
+#    <img src="{ruta_imagen_local}" class="centered-image">
+#    """, unsafe_allow_html=True)
 
 from PIL import Image
 
@@ -213,7 +213,7 @@ st.markdown(
 st.image(image, caption='Arco de Ayacucho', use_column_width=False, width=200)
 
 # HTML para centrar la imagen
-st.markdown(f"""
+st.markdown("""
     <img src="{ruta_imagen_local}" class="centered-image">
     """, unsafe_allow_html=True)
     
